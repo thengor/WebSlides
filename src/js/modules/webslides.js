@@ -246,11 +246,11 @@ export default class WebSlides {
     }
 
     if (this.currentSlide_) {
+      this.currentSlide_.hide();
+
       if (isMovingForward) {
         this.currentSlide_.moveAfterLast();
       }
-
-      this.currentSlide_.hide();
     }
 
     nextSlide.show();
