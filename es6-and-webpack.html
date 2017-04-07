@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ES6 and Webpack</title>
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css">
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/override.css">
+    <!-- CSS Colors -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/colors.css">
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+  </head>
+  <body>
+    <main role="main">
+    <article id="webslides" class="vertical">
+      <section>
+        <span class="background" style="background-image:url('static/images/nature.jpg')"></span>
+        <!--.wrap = container 1200px -->
+        <div class="wrap aligncenter">
+          <h1><strong>ES6 and Webpack</strong></h1>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+        <section>
+          <div class="wrap">
+            <img class="alignleft size-50" src="static/images/es6.jpg">
+            <h2 class="blockquote">"The next generation of Javascript"</h2>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      <section>
+        <div class="wrap">
+          <h3>Features of ES6</h3>
+          <ul class="text-cols">
+            <li><strong>Block-Scoped Variable - let and const</strong></li>
+            <li><strong>Arrow Function</strong></li>
+            <li><strong>Enhanced Object Properties</strong></li>
+            <li><strong>Module - import and export</strong></li>
+            <li>Extended Parameter Handling</li>
+            <li>Enhanced Regular Expression</li>
+            <li>Template Literals</li>
+            <li>Destructuring Assignment</li>
+            <li>Map/Set and WeakMap/WeakSet</li>
+            <li>Symbol</li>
+            <li>Class</li>
+            <li>Promise</li>
+            <li>Generator</li>
+            <li>New Built-In Methods</li>
+            <li>Typed Arrays</li>
+            <li>Meta-Programming</li>
+          </ul>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+      
+      <section>
+        <div class="wrap">
+          <h2>let and const</h2>
+          <p>Block-Scoped Variables</p>
+          <hr>
+          <div class="grid">
+           
+            <div class="column">
+              <h3>ES5</h3>
+      <pre><code>'use strict';
+function foo(){
+    console.log(i);
+    for (var i = 0; i < 1; i++) {
+      console.log(i);
+    }
+    console.log(i);
+};
+foo();</code></pre>
+            </div>
+
+            <div class="column">
+              <h3>ES6</h3>
+       <pre><code>'use strict';
+function foo(){
+    console.log(i);
+    for (let i = 0; i < 1; i++) {
+      console.log(i);
+    }
+    console.log(i);
+};
+foo();</code></pre>              
+            </div>
+          </div>
+          <!--end .grid -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="aligncenter">
+          <div class="wrap">
+            <div class="cta">
+              <div>
+                <h2 class="aside-title">Arrow Function</h1>
+              </div>
+              <div class="benefit">
+                <pre><code>'use strict';
+var array = [1, 2, 3];
+// ES5
+array.forEach(function(v) {
+    console.log(v);
+});
+// ES6
+array.forEach(v => console.log(v));</code></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Enhanced Object Properties</h2>
+          <hr>
+          <div class="grid">
+           
+            <div class="column">
+              <h6>Property Shorthand</h6>
+      <pre><code>'use strict';
+var x=1, y=2;
+//ES5
+var obj = {x: x, y: y};
+//ES6
+var obj = {x, y};</code></pre>
+            </div>
+
+            <div class="column">
+              <h6>Computed Property Names</h6>
+       <pre><code>'use strict';
+function getRandomNum() {
+  return Math.random();
+}
+//ES6
+let obj = {
+    foo: "bar",
+    [ 'baz' + getRandomNum() ]: 42
+};
+//ES5
+obj['baz' + getRandomNum()] = 42;</code></pre>              
+            </div>
+
+            <div class="column">
+              <h6>Method Properties</h6>
+      <pre><code>'use strict';
+//ES5
+var obj = {
+    sayHelloTo : function(name) {
+       console.log('Hello ' +  name);
+    }
+}
+//ES6
+let obj = {
+    sayHelloTo (name) {
+       console.log(`Hello ${name}`);
+    }
+}</code></pre>
+            </div>
+
+          </div>
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+
+      <section>
+          <div class="aligncenter">
+            <h1>Module</h1>
+            <p>Import and export</p>
+          </div>
+        </section>        
+      
+      <section>
+        <!--.wrap = container 1200px -->
+        <div class="wrap size-70 aligncenter">
+          <h2><strong>Webpack</strong></h2>
+          <p class="text-intro">Module bundler</p>
+          <div class="bg-white shadow">
+            <img src="static/images/what-is-webpack.png">
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+        <section>
+          <div class="wrap">
+            <div class="content-left webpack-four-concepts">
+              <h3>Four Core Concepts</h3>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h2>Entry</h2>
+                    Tells webpack where to start and follows the graph of dependencies to know what to bundle.
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2>Output</h2>
+                     Tells webpack where to bundle your application..
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2>Loaders</h2>
+                    Webpack treats every file (.css, .html, .scss, .jpg, etc.) as a module. However, webpack only understands JavaScript. Loaders in webpack transform these files into modules.
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2>Plugins</h2>
+                    Since Loaders only execute transforms on a per-file basis, plugins are most commonly used (but not limited to) performing actions and custom functionality on "compilations" or "chunks" of your bundled modules.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-gradient-gray">
+          <!--.wrap = container 1200px -->
+          <div class="wrap size-50">
+            <h3>webpack-dev-server</h3>
+            <hr>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>providing a server and live reloading</h2>
+                </li>
+                <li>
+                  <h2>proxying requests to your backend server</h2>
+                  <p><pre><code>proxy: {
+  "/api": "http://localhost:3000"
+}</code></pre></p>A request to /api/users will now proxy the request to http://localhost:3000/api/users.
+                </li>
+              </ul>
+            </div>
+            <!-- .end bg-white.shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+            <ul class="flexblock plans blink">
+              <li>
+                <a href="#" title="Register">
+                  <h2>Task runner</h2>
+                  <div>
+                    <span class="price"></span>
+                    <ul>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>Gulp</strong> 
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>Grunt</strong>
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>Npm scripts</strong>
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>...</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Purchase">
+                  <h2>Module bundler</h2>
+                  <div>
+                    <span class="price"></span>
+                    <ul>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>Webpack</strong> 
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>Browserify</strong>
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>RequireJS</strong>
+                      </li>
+                      <li>
+                        <svg class="fa-check">
+                          <use xlink:href="#fa-check"></use>
+                        </svg>
+                        <strong>...</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="aligncenter">
+          <!--.wrap = container 1200px with fadein animation -->
+          <div class="wrap">
+            <h1>Thanks</h1>
+            <p>Feel free to submit feedback.</p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+  </article>
+  <!-- end article -->
+  </main>
+  <script src="static/js/webslides.js"></script>
+  <script>
+  window.ws = new WebSlides();
+  </script>
+  <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+  <script defer src="static/js/svg-icons.js"></script>
+  <script src="static/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

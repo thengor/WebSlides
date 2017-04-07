@@ -1,0 +1,46 @@
+html,
+body,
+input,
+select,
+textarea {
+  font-family: helvetica, arial, sans-serif;
+}
+
+section, .slide {
+    padding-top: 0; 
+    padding-bottom: 0; 
+}
+
+.blockquote{
+	font-style: italic;
+    margin-top: 150px;
+}
+
+hr {
+	margin: 0;
+}
+
+p + hr {
+	margin: 0;
+}
+
+.aside-title {
+	margin-right: 50px;
+    margin-top: 135px;
+}
+
+.webpack-four-concepts{
+	width: 100%;
+}
+
+.webpack-four-concepts ul{
+	margin-top: 0;
+}
+
+.webpack-four-concepts ul li{
+	padding: 2rem;
+}
+
+.reasons li:before{
+   font-size: 4rem;
+}
